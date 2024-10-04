@@ -18,6 +18,8 @@ def play_single_round():
             userguess = int(input())
         except ValueError:
             print("That's not a valid input. Enter a number.")
+            attempts = attempts - 1
+            max_attempts = max_attempts + 1
             continue      
     #guessing game logic, will stop at 10 attempts
         if attempts == 10:
