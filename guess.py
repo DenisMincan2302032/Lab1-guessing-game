@@ -13,7 +13,7 @@ def play_single_round():
         attempts = attempts + 1
         max_attempts = max_attempts - 1
         #erorr handling for invalid values, will raise an error and return
-        #to start of loop
+        #to start of loop, will also return user atempts
         try:
             userguess = int(input())
         except ValueError:
