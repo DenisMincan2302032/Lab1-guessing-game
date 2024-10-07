@@ -62,20 +62,18 @@ def play_game():
             total_score = max_attempts + total_score
             total_score = total_score / 3
             print("Your total score is", total_score)
-            if total_score <= 7:
+            if total_score >= 7:
                 print("Excellent guessing skills")
             if 7 <= total_score <= 9:
                 print("Good job!")
             else:
                 print("Better luck next time")
 
+play_game()
 
 
 
 
-
-if __name__ == "__main__":
-    play_game()
 
     
 
