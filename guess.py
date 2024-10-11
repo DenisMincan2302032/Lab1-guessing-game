@@ -41,34 +41,40 @@ def play_game():
     #total score setup, addition of max_attempts for score
     total_rounds = 4
     total_score = 0
-    for x in range(total_rounds):
-        if x == 0:
-            print("Welcome to the guessing game.")
-            print("You will have 3 rounds of this game to guess the magic number, which is from 1-100.")
-        if x == 1:
-            print("Welcome to round 1.")
-            play_single_round()
-            total_score = max_attempts + total_score
-            print("Your total score is", total_score)
-        if x == 2:
-            print("Welcome to round 2.")
-            play_single_round()
-            total_score = max_attempts + total_score
-            print("Your total score is", total_score)
-        if x == 3:
-            print("Welcome to round 3.")
-            play_single_round()
-            print("Game over. No more rounds")
-            total_score = max_attempts + total_score
-            total_score = total_score / 3
-            print("Your total score is", total_score)
-            if total_score >= 7:
-                print("Excellent guessing skills")
-            if 7 <= total_score <= 9:
-                print("Good job!")
-            else:
-                print("Better luck next time")
+    while True:
 
+        for x in range(total_rounds):
+            if x == 0:
+                print("Welcome to the guessing game.")
+                print("You will have 3 rounds of this game to guess the magic number, which is from 1-100.")
+            if x == 1:
+                print("Welcome to round 1.")
+                play_single_round()
+                total_score = max_attempts + total_score
+                print("Your total score is", total_score)
+            if x == 2:
+                print("Welcome to round 2.")
+                play_single_round()
+                total_score = max_attempts + total_score
+                print("Your total score is", total_score)
+            if x == 3:
+                print("Welcome to round 3.")
+                play_single_round()
+                print("Game over. No more rounds")
+                total_score = max_attempts + total_score
+                total_score = total_score / 3
+                print("Your total score is", total_score)
+                if total_score >= 7:
+                    print("Excellent guessing skills")
+                if 7 <= total_score <= 9:
+                    print("Good job!")
+                else:
+                    print("Better luck next time")
+        choice = input("Would you like to try again? y/n")
+        if choice == "y":
+            continue
+        else:
+            break    
 play_game()
 
 
